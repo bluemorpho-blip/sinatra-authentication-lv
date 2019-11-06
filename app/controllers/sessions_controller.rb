@@ -5,15 +5,12 @@ class SessionsController < ApplicationController
   end
 
   post '/sessions' do
-    # raise params.inspect - used to check output w/ w/o email entry
-    # raise params[:email].inspect
-    session[:email] = params[:email]
-    # raise session[:email].inspect
+    login(params[:email])
     redirect '/posts'
   end
 
     get '/logout' do
-      session.clear
+      logout!
       redirect '/login'
     end
 
