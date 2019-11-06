@@ -1,6 +1,6 @@
 require './config/environment'
 
-use Rack::Session::Cookie
+# use Rack::Session::Cookie
 use SessionsController
 use PostsController
 use UsersController
