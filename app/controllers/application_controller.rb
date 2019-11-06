@@ -14,11 +14,13 @@ class ApplicationController < Sinatra::Base
   end
 
   def login(email)
+    # Is the user who they claim to be?
     session[:eamil] = email
   end
 
-  def logout
+  def logout!
     session.clear
   end
+end
 
 end
